@@ -1,3 +1,5 @@
+@import "./banner";
+
 $trans: 300ms cubic-bezier(0.05, 1.12, 0.48, 0.86);
 
 * {
@@ -228,40 +230,5 @@ input[type="button"] {
   &_copyright {
     display: flex;
     justify-content: space-between;
-  }
-}
-.cp-banner {
-  background-color: #f1f0f8;
-  &__background {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url(../img/banner.jpg);
-    min-height: 1013px;
-  }
-
-  &__wrap {
-    display: flex;
-  }
-  b {
-    color: #010101;
-    text-align: center;
-    font-family: Amulya;
-    font-size: 89.236px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 113.023%; /* 100.858px */
-    letter-spacing: -4.908px;
-    text-transform: uppercase;
-  }
-  span {
-    color: #6e00ff;
-    font-family: Amulya;
-    font-size: 89.236px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 113.023%; /* 100.858px */
-    letter-spacing: -4.908px;
-    text-transform: uppercase;
   }
 }

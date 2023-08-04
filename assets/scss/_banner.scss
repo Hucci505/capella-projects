@@ -1,0 +1,81 @@
+.cp-banner {
+  background-color: #f1f0f8;
+  &__background {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url(../img/banner.jpg);
+    min-height: 100vh;
+  }
+
+  &__wrap {
+    display: flex;
+    padding-top: 100px;
+    justify-content: center;
+    & > img {
+      position: absolute;
+
+      &:nth-child(1) {
+        animation: moveUpDown 2.2s infinite;
+        left: 25%;
+        top: 15%;
+      }
+      &:nth-child(2) {
+        animation: moveUpDown 2s infinite;
+        left: 28%;
+        top: 32%;
+      }
+      &:nth-child(3) {
+        animation: moveUpDown 2.7s infinite;
+        left: 70%;
+        top: 17%;
+      }
+      &:nth-child(4) {
+        animation: moveUpDown 2.4s infinite;
+        left: 72%;
+        top: 34%;
+      }
+    }
+  }
+
+  h1 {
+    max-width: 910px;
+  }
+
+  b {
+    color: #010101;
+    text-align: center;
+    font-family: Amulya;
+    font-size: 89.236px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 113.023%; /* 100.858px */
+    letter-spacing: -4.908px;
+    text-transform: uppercase;
+  }
+  span {
+    color: #6e00ff;
+    font-family: Amulya;
+    font-size: 89.236px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 113.023%; /* 100.858px */
+    letter-spacing: -4.908px;
+    text-transform: uppercase;
+  }
+}
+
+/* Визначення анімації з назвою "moveUpDown" */
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(
+      0
+    ); /* Початкове і кінцеве положення - нульовий зсув */
+  }
+  50% {
+    transform: translateY(
+      -5px
+    ); /* Положення на середині анімації - зсув вгору на 5 пікселів */
+  }
+}
