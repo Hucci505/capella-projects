@@ -1,0 +1,26 @@
+.cp-assist {
+  &__wrap {
+    margin: 132px 0 84px 0;
+    display: flex;
+    gap: 120px;
+  }
+  &__cont {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 26px;
+  }
+  &__sol {
+    gap: 22px;
+    display: flex;
+  }
+
+  &__button {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    button {
+      flex: 48%;
+    }
+  }
+}
