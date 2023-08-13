@@ -1,4 +1,8 @@
 .cp-line {
+  border: 0.5px solid #a9a7a7;
+  &__wrap {
+    margin: 30px 0;
+  }
   li {
     color: #010101;
     font-family: Inter;
@@ -9,5 +13,6 @@
   }
   ul {
     display: flex;
+    justify-content: space-around;
   }
 }

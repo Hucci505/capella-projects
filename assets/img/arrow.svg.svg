@@ -1,0 +1,36 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="20" height="20" fill="#1E1E1E"/>
+<g id="Real Estate Website" clip-path="url(#clip0_2_2)">
+<rect width="1440" height="6042" transform="translate(-80 -1382)" fill="white"/>
+<g id="Mask group">
+<mask id="mask0_2_2" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="542" height="359">
+<rect id="Rectangle 26" width="542" height="359" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_2_2)">
+<g id="Header Content">
+<g id="Group 31">
+<g id="h5:before">
+<g id="arrow01.svg">
+<g id="Group">
+<g id="Group_2" opacity="0.9">
+<g id="Group_3" opacity="0.9">
+<path id="Vector" d="M4.11751 16.7821H16.7827V4.11694" stroke="#6E00FF" stroke-width="3.48327" stroke-miterlimit="20" stroke-linecap="square"/>
+</g>
+<g id="Group_4" opacity="0.9">
+<path id="Vector_2" d="M4.11751 4.11694L15.5165 15.5159" stroke="#6E00FF" stroke-width="3.48327" stroke-miterlimit="20" stroke-linecap="square"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_2_2">
+<rect width="1440" height="6042" fill="white" transform="translate(-80 -1382)"/>
+</clipPath>
+</defs>
+</svg>
