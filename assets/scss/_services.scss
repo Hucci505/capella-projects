@@ -1,0 +1,55 @@
+.cp-services {
+  &__wrap {
+    display: flex;
+    gap: 82px;
+    margin: 100px 0;
+  }
+  &__img {
+    position: relative;
+    display: flex;
+    gap: 12px;
+    &-1 {
+      z-index: 1;
+    }
+    &-2 {
+      padding-top: 26px;
+    }
+    &-3 {
+      width: 170px;
+      height: 118px;
+      background-color: #6e00ff;
+      position: absolute;
+      top: 72%;
+      left: -4%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    max-width: 557px;
+    width: 100%;
+  }
+
+  &__value {
+    display: flex;
+    gap: 22px;
+    margin-bottom: 8px;
+  }
+
+  &__button {
+    align-items: flex-start;
+    display: flex;
+    gap: 18px;
+  }
+  h2 {
+    max-width: 470px;
+    margin-bottom: 32px;
+  }
+  p {
+    max-width: 368px;
+  }
+  a {
+    flex-shrink: 0;
+  }
+}
