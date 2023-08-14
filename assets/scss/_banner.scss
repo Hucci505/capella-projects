@@ -1,6 +1,7 @@
 .cp-banner {
   background-color: #f1f0f8;
   &__background {
+    position: relative;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -17,28 +18,29 @@
 
       &:nth-child(1) {
         animation: moveUpDown 2.2s infinite;
-        left: 25%;
-        top: 15%;
+        left: 18%;
+        top: 12%;
       }
       &:nth-child(2) {
         animation: moveUpDown 2s infinite;
-        left: 28%;
-        top: 32%;
+        left: 20%;
+        top: 36%;
       }
       &:nth-child(3) {
         animation: moveUpDown 2.7s infinite;
-        left: 70%;
-        top: 17%;
+        top: 12%;
+        right: 22%;
       }
       &:nth-child(4) {
         animation: moveUpDown 2.4s infinite;
-        left: 72%;
-        top: 34%;
+        right: 18%;
+        top: 36%;
       }
     }
   }
 
   h1 {
+    z-index: 1;
     max-width: 910px;
   }
 

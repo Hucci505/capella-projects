@@ -1,21 +1,20 @@
 .cp-rental {
-  background: rgba(239, 242, 247, 0.6);
-  &__wrap {
+  background: #eff2f7;
+  &__heading-wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px 0;
+    padding-top: 130px;
   }
-
   &__info {
     display: flex;
     gap: 16px;
     margin-bottom: 24px;
   }
   h2 {
+    padding: 26px 0 82px 0;
     text-align: center;
     max-width: 708px;
-    margin-bottom: 82px;
   }
   h3 {
     color: #010101;
@@ -24,6 +23,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    letter-spacing: 0;
   }
 
   a {
@@ -36,9 +36,14 @@
     font-weight: 700;
     line-height: 21.074px;
     text-transform: uppercase;
+    transition: $trans;
+    &:hover {
+      color: #6e00ff;
+    }
   }
 
   p {
+    text-align: start;
     margin: 14px 0;
   }
 
@@ -53,8 +58,9 @@
   &__text {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     padding-top: 30px;
-    background: #eff2f799;
+    background: #eff2f7;
   }
 
   &__slider {
@@ -68,17 +74,18 @@
   .swiper {
     overflow: visible;
 
-    &::after {
+    &::before {
       position: absolute;
       content: "";
       height: calc(100%);
       width: 100vw;
-      background-color: #eff2f799;
+      background-color: #eff2f7;
       right: 100%;
-      top: -35px;
+      top: 0;
       z-index: 5;
     }
     &-wrapper {
+      padding-bottom: 100px;
       overflow: visible;
       // position: relative;
     }
