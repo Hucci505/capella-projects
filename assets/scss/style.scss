@@ -2,7 +2,7 @@
 @import "./banner";
 @import "./line";
 @import "./assist", "./rental";
-@import "./cp-customers", "./services";
+@import "./cp-customers", "./services", "./dream";
 @import "./var";
 
 * {
@@ -158,6 +158,23 @@ input[type="button"] {
   letter-spacing: -3.818px;
   text-transform: capitalize;
 }
+.place {
+  color: #fff;
+  font-family: Synonym;
+  font-size: 21.852px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 152.023%; /* 33.22px */
+}
+.price {
+  color: #fff;
+  font-family: Synonym;
+  font-size: 18.346px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 152.023%; /* 27.89px */
+}
+
 .cp-header {
   background-color: #f1f0f8;
   &_wrap {
