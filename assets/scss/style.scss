@@ -61,11 +61,11 @@ h1 {
   line-height: 113.023%;
   letter-spacing: -4.908px;
   text-transform: uppercase;
-  @include lg-max {
+  @include xl-max {
     font-size: 69px;
   }
 
-  @include sm-max {
+  @include md-max {
     font-size: 49px;
   }
 }
@@ -78,11 +78,11 @@ h2 {
   line-height: 111.023%;
   letter-spacing: -3.818px;
   text-transform: capitalize;
-  @include lg-max {
+  @include xl-max {
     font-size: 49px;
   }
 
-  @include sm-max {
+  @include md-max {
     font-size: 39px;
   }
 }
@@ -187,11 +187,11 @@ input[type="button"] {
   line-height: 111.023%;
   letter-spacing: -3.818px;
   text-transform: capitalize;
-  @include lg-max {
+  @include xl-max {
     font-size: 49px;
   }
 
-  @include sm-max {
+  @include md-max {
     font-size: 39px;
   }
 }

@@ -4,7 +4,9 @@
     display: flex;
     gap: 120px;
     @include xl-max {
-      flex-wrap: wrap;
+      align-items: flex-start;
+      width: 100%;
+      height: auto;
     }
     @include lg-max {
       margin: 80px 0;
@@ -13,10 +15,12 @@
     @include md-max {
       margin: 60px 0;
       gap: 40px;
+      flex-direction: column;
     }
     img {
       @include xl-max {
-        width: 100%;
+        max-width: 500px;
+        margin-inline: auto;
       }
     }
   }
@@ -45,6 +49,10 @@
     }
     @include xl-max {
       flex-direction: column;
+      align-items: center;
+    }
+    @include md-max {
+      flex-direction: column-reverse;
       align-items: center;
     }
   }

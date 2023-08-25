@@ -8,6 +8,9 @@
     background-image: url(../img/banner.jpg);
     min-height: 100vh;
     background-repeat: no-repeat;
+    @include md-max {
+      min-height: calc(100vh - 70px);
+    }
   }
 
   &__wrap {
@@ -15,11 +18,8 @@
     display: flex;
     padding-top: 100px;
     justify-content: center;
-    @include lg-max {
-      padding-top: 80px;
-    }
-    @include md-max {
-      padding-top: 60px;
+    @include sm-max {
+      padding-top: 70px;
     }
     & > img {
       position: absolute;
