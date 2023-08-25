@@ -90,7 +90,7 @@
   }
   h2 {
     max-width: 470px;
-    margin-bottom: 32px;
+
     @include xl-max {
       max-width: fit-content;
     }

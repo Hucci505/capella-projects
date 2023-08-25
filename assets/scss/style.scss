@@ -211,6 +211,12 @@ input[type="button"] {
   font-weight: 600;
   line-height: 152.023%; /* 27.89px */
 }
+.space-heading {
+  margin-bottom: 40px;
+  @include md-max {
+    margin-bottom: 20px;
+  }
+}
 
 .cp-header {
   background-color: #f1f0f8;

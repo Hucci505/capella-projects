@@ -82,10 +82,10 @@
     letter-spacing: -4.908px;
     text-transform: uppercase;
 
-    @include lg-max {
+    @include xl-max {
       font-size: 69px;
     }
-    @include sm-max {
+    @include md-max {
       font-size: 49px;
     }
   }

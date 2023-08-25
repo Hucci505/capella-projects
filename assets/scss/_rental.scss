@@ -21,6 +21,15 @@
     padding: 26px 0 82px 0;
     text-align: center;
     max-width: 708px;
+    @include xl-max {
+      padding: 26px 0 62px 0;
+    }
+    @include lg-max {
+      padding: 22px 0 42px 0;
+    }
+    @include md-max {
+      padding: 20px 0 20px 0;
+    }
   }
   h3 {
     color: #010101;

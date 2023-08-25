@@ -87,6 +87,12 @@
     margin-top: 48px;
     display: flex;
     gap: 16px;
+    @include xl-max {
+      margin-top: 40px;
+    }
+    @include md-max {
+      margin-top: 20px;
+    }
     &-prev {
       transform: scale(-1, 1);
       //   transform: rotate(-180deg);
