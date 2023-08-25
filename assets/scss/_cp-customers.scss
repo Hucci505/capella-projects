@@ -6,17 +6,29 @@
     display: flex;
     gap: 40px;
     padding: 100px 0;
+    @include xl-max {
+      flex-wrap: wrap;
+    }
+    @include lg-max {
+      padding-top: 80px;
+    }
+    @include md-max {
+      padding-top: 60px;
+    }
   }
 
   &__heading {
     flex: 0 0 451px;
+    @include xl-max {
+      flex: 0 0 100%;
+    }
   }
 
   &__item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 423px;
+    height: 450px;
     padding: 41px 27px 36px 40px;
     border-radius: 10px;
     background: #fff;
@@ -39,13 +51,20 @@
   &__people {
     display: flex;
     align-items: center;
-    margin-top: 36px;
+    margin-top: 30px;
+    gap: 30px;
+  }
+  &__people-2 {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    gap: 30px;
   }
   &__person {
     display: flex;
     flex-direction: column;
     gap: 2px;
-    margin: 0 75px 0 14px;
+
     .name {
       color: #010101;
       font-family: Synonym;

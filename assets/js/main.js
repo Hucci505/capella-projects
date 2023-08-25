@@ -5,26 +5,9 @@ var swiper = new Swiper(".cp-rental__slider .swiper", {
   spaceBetween: 36,
   breakpoints: {
     1200: { slidesPerView: "auto" },
-    1025: { slidesPerView: 2 },
-    550: { slidesPerView: 1 },
+    900: { slidesPerView: 3 },
+    576: { slidesPerView: 2 },
   },
-  // breakpoints: {
-  //   // when window width is >= 320px
-  //   300: {
-  //     slidesPerView: 1.5,
-  //   },
-  //   // when window width is >= 480px
-  //   600: {
-  //     slidesPerView: 2.5,
-  //   },
-  //   // when window width is >= 640px
-  //   900: {
-  //     slidesPerView: 3.5,
-  //   },
-  //   1200: {
-  //     slidesPerView: 4.5,
-  //   },
-  // },
 });
 
 new Swiper(".cp-customers .swiper", {
@@ -36,16 +19,22 @@ new Swiper(".cp-customers .swiper", {
   },
   breakpoints: {
     1200: { slidesPerView: "auto" },
-    1025: { slidesPerView: 2 },
-    550: { slidesPerView: 2 },
+    1100: { slidesPerView: 3 },
+    725: { slidesPerView: 2 },
     320: { slidesPerView: 1 },
   },
 });
-
 
 var swiper = new Swiper(".mySwiper", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+});
+
+const burgerIcon = document.getElementById("burger-icon");
+const menuList = document.querySelector(".menu-list");
+
+burgerIcon.addEventListener("click", () => {
+  menuList.classList.toggle("show-menu");
 });

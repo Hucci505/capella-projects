@@ -1,14 +1,35 @@
 .cp-assist {
   &__wrap {
-    margin: 132px 0 84px 0;
+    margin: 100px 0;
     display: flex;
     gap: 120px;
+    @include xl-max {
+      flex-wrap: wrap;
+    }
+    @include lg-max {
+      margin: 80px 0;
+      gap: 80px;
+    }
+    @include md-max {
+      margin: 60px 0;
+      gap: 40px;
+    }
+    img {
+      @include xl-max {
+        width: 100%;
+      }
+    }
   }
   &__cont {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 26px;
+
+    @include xl-max {
+      text-align: center;
+      align-items: center;
+    }
   }
   &__sol {
     gap: 22px;
@@ -21,6 +42,10 @@
     gap: 22px;
     button {
       flex: 48%;
+    }
+    @include xl-max {
+      flex-direction: column;
+      align-items: center;
     }
   }
 }

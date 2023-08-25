@@ -3,7 +3,7 @@
 @import "./line";
 @import "./assist", "./rental";
 @import "./cp-customers", "./services", "./dream";
-@import "./var";
+@import "./var", "./mixin";
 
 * {
   box-sizing: border-box;
@@ -61,6 +61,13 @@ h1 {
   line-height: 113.023%;
   letter-spacing: -4.908px;
   text-transform: uppercase;
+  @include lg-max {
+    font-size: 69px;
+  }
+
+  @include sm-max {
+    font-size: 49px;
+  }
 }
 h2 {
   color: #010101;
@@ -71,6 +78,13 @@ h2 {
   line-height: 111.023%;
   letter-spacing: -3.818px;
   text-transform: capitalize;
+  @include lg-max {
+    font-size: 49px;
+  }
+
+  @include sm-max {
+    font-size: 39px;
+  }
 }
 h3 {
   color: #000;
@@ -99,6 +113,9 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 152.023%;
+  @include md-max {
+    font-size: 16px;
+  }
 }
 button,
 input[type="submit"],
@@ -118,11 +135,15 @@ input[type="button"] {
   &:hover {
     background: #6e00ff;
   }
+  @include sm-max {
+    display: none;
+  }
 }
 
 .btn {
   padding: 11px 30px;
   border-radius: 160px;
+  flex-shrink: 0;
   background: linear-gradient(0deg, #000 0%, #000 100%), #090808;
   transition: $trans;
   &:hover {
@@ -148,6 +169,15 @@ input[type="button"] {
   margin-inline: auto;
   padding-inline: 15px;
 }
+.cp-main {
+  padding-top: 101px;
+  @include lg-max {
+    padding-top: 80px;
+  }
+  @include md-max {
+    padding-top: 60px;
+  }
+}
 .purp {
   color: #6e00ff;
   font-family: Space Grotesk;
@@ -157,6 +187,13 @@ input[type="button"] {
   line-height: 111.023%;
   letter-spacing: -3.818px;
   text-transform: capitalize;
+  @include lg-max {
+    font-size: 49px;
+  }
+
+  @include sm-max {
+    font-size: 39px;
+  }
 }
 .place {
   color: #fff;
@@ -177,13 +214,26 @@ input[type="button"] {
 
 .cp-header {
   background-color: #f1f0f8;
+  box-shadow: 0 8px 24px 0 rgba(149, 157, 165, 0.5);
+  position: fixed;
+  z-index: 12;
+  left: 0;
+  right: 0;
+  padding: 10px 0;
   &_wrap {
-    margin-top: 42px;
     display: flex;
     align-items: center;
   }
   &_logo {
-    margin-right: 90px;
+    margin-right: 92px;
+    @include md-max {
+      margin-right: auto;
+    }
+    img {
+      @include sm-max {
+        width: 60%;
+      }
+    }
   }
   ul {
     display: flex;
@@ -204,11 +254,21 @@ input[type="button"] {
   }
   &_nav {
     margin-right: auto;
+
+    @include lg-max {
+      margin-right: 0;
+      margin-left: 20px;
+      order: 1;
+    }
   }
   &_reg {
     display: flex;
     align-items: center;
     gap: 25px;
+
+    @include lg-max {
+      margin-left: auto;
+    }
     a {
       color: #000;
       font-family: Synonym;
@@ -233,6 +293,55 @@ input[type="button"] {
     line-height: 141.023%;
     letter-spacing: -0.8px;
     text-transform: capitalize;
+  }
+
+  .burger-icon {
+    display: none; /* Приховуємо іконку на початку */
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .line {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0;
+  }
+  .menu-list {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+
+    z-index: 2;
+  }
+
+  @include lg-max {
+    .burger-icon {
+      display: flex; /* Показуємо іконку на малих екранах */
+    }
+    .menu-list {
+      /* ... попередні стилі ... */
+      display: none; /* Змініть цей рядок */
+    }
+
+    .show-menu {
+      display: flex !important; /* Показуємо меню при класі show-menu */
+    }
+
+    .menu-list {
+      display: none; /* Приховуємо список на малих екранах */
+      flex-direction: column;
+      position: absolute;
+      top: 70px; /* Підлаштуйте відстань від верху відповідно до вашого дизайну */
+      right: 20px; /* Підлаштуйте відстань від правого краю відповідно до вашого дизайну */
+      background-color: #eff2f7;
+      padding: 20px;
+    }
+
+    .menu-list li {
+      margin-bottom: 10px;
+    }
   }
 }
 .cp-footer {
@@ -261,15 +370,25 @@ input[type="button"] {
   }
 
   &_wrap {
-    padding: 100px 0 100px 0;
+    padding: 100px 0;
+    @include lg-max {
+      padding: 80px 0;
+    }
+    @include md-max {
+      padding: 60px 0;
+    }
   }
   &_info {
     justify-content: space-between;
     display: flex;
     padding-bottom: 38px;
+
+    @include sm-max {
+      flex-wrap: wrap;
+    }
   }
   &_logo {
-    width: 28%;
+    max-width: 368px;
     img {
       padding-bottom: 24px;
     }
@@ -285,6 +404,13 @@ input[type="button"] {
   &_menu {
     display: flex;
     gap: 93px;
+    @include lg-max {
+      flex-wrap: wrap;
+      gap: 73px;
+    }
+    @include md-max {
+      gap: 53px;
+    }
   }
   ul {
     display: flex;
@@ -302,5 +428,9 @@ input[type="button"] {
   &_copyright {
     display: flex;
     justify-content: space-between;
+    @include sm-max {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
   }
 }

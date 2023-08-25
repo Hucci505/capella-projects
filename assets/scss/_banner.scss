@@ -1,40 +1,48 @@
+@import "./mixin";
+
 .cp-banner {
   background-color: #f1f0f8;
   &__background {
-    position: relative;
-    background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     background-image: url(../img/banner.jpg);
     min-height: 100vh;
+    background-repeat: no-repeat;
   }
 
   &__wrap {
+    position: relative;
     display: flex;
     padding-top: 100px;
     justify-content: center;
+    @include lg-max {
+      padding-top: 80px;
+    }
+    @include md-max {
+      padding-top: 60px;
+    }
     & > img {
       position: absolute;
 
       &:nth-child(1) {
         animation: moveUpDown 2.2s infinite;
-        left: 18%;
-        top: 12%;
+        left: 0;
+        top: 120px;
       }
       &:nth-child(2) {
         animation: moveUpDown 2s infinite;
-        left: 20%;
-        top: 36%;
+        left: 50px;
+        top: 380px;
       }
       &:nth-child(3) {
         animation: moveUpDown 2.7s infinite;
-        top: 12%;
-        right: 22%;
+        top: 120px;
+        right: 50px;
       }
       &:nth-child(4) {
         animation: moveUpDown 2.4s infinite;
-        right: 18%;
-        top: 36%;
+        right: 0;
+        top: 380px;
       }
     }
   }
@@ -54,6 +62,12 @@
     line-height: 113.023%; /* 100.858px */
     letter-spacing: -4.908px;
     text-transform: uppercase;
+    @include lg-max {
+      font-size: 69px;
+    }
+    @include sm-max {
+      font-size: 49px;
+    }
   }
   span {
     color: #6e00ff;
@@ -64,6 +78,13 @@
     line-height: 113.023%; /* 100.858px */
     letter-spacing: -4.908px;
     text-transform: uppercase;
+
+    @include lg-max {
+      font-size: 69px;
+    }
+    @include sm-max {
+      font-size: 49px;
+    }
   }
 }
 

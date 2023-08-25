@@ -5,6 +5,18 @@
     display: flex;
     gap: 82px;
     margin: 100px 0;
+    @include xl-max {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @include lg-max {
+      margin: 80px 0;
+      gap: 62px;
+    }
+    @include md-max {
+      margin: 60px 0;
+      gap: 42px;
+    }
   }
   &__img {
     position: relative;
@@ -17,6 +29,11 @@
       &:hover {
         img {
           transform: scale(1);
+        }
+      }
+      img {
+        @include md-max {
+          width: 100%;
         }
       }
     }
@@ -34,6 +51,9 @@
       position: absolute;
       top: 72%;
       left: -4%;
+      @include md-max {
+        display: none;
+      }
     }
     img {
       transition: 1s;
@@ -46,6 +66,11 @@
     flex-direction: column;
     max-width: 557px;
     width: 100%;
+    @include xl-max {
+      max-width: fit-content;
+      text-align: center;
+      align-items: center;
+    }
   }
 
   &__value {
@@ -58,10 +83,17 @@
     align-items: flex-start;
     display: flex;
     gap: 18px;
+    @include md-max {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   h2 {
     max-width: 470px;
     margin-bottom: 32px;
+    @include xl-max {
+      max-width: fit-content;
+    }
   }
   p {
     max-width: 368px;
