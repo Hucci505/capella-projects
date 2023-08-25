@@ -44,6 +44,9 @@
         right: 0;
         top: 380px;
       }
+      @include xl-max {
+        display: none;
+      }
     }
   }
 
@@ -62,10 +65,10 @@
     line-height: 113.023%; /* 100.858px */
     letter-spacing: -4.908px;
     text-transform: uppercase;
-    @include lg-max {
+    @include xl-max {
       font-size: 69px;
     }
-    @include sm-max {
+    @include md-max {
       font-size: 49px;
     }
   }
