@@ -34,7 +34,21 @@ var swiper = new Swiper(".mySwiper", {
 
 const burgerIcon = document.getElementById("burger-icon");
 const menuList = document.querySelector(".menu-list");
+const closeIcon = document.querySelector(".burger-btn");
 
 burgerIcon.addEventListener("click", () => {
-  menuList.classList.toggle("show-menu");
+  menuList.classList.add("show-menu");
+});
+
+closeIcon.addEventListener("click", () => {
+  menuList.classList.remove("show-menu");
+});
+
+$(document).ready(function () {
+  $("burger-btn").click(function () {
+    $("#div1").fadeToggle();
+    $("#div2").fadeToggle();
+    $("#div3").fadeToggle();
+    $("#div4").fadeToggle();
+  });
 });

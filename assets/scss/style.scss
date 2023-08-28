@@ -337,16 +337,32 @@ input[type="button"] {
 
     .menu-list {
       display: none; /* Приховуємо список на малих екранах */
-      flex-direction: column;
       position: absolute;
-      top: 70px; /* Підлаштуйте відстань від верху відповідно до вашого дизайну */
-      right: 20px; /* Підлаштуйте відстань від правого краю відповідно до вашого дизайну */
       background-color: #eff2f7;
       padding: 20px;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100vh;
     }
 
     .menu-list li {
       margin-bottom: 10px;
+    }
+    .menu-list ul {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .burger-btn {
+      font-size: 100px;
+      color: red;
+      position: absolute;
+      right: 0;
+      top: -40px;
+      cursor: pointer;
     }
   }
 }

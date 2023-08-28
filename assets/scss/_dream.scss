@@ -79,6 +79,13 @@
       width: 100%;
     }
   }
+  .place {
+    @include md-max {
+      position: absolute;
+      top: 0%;
+      left: 10px;
+    }
+  }
   .price {
     position: absolute;
     bottom: 7%;
@@ -87,5 +94,27 @@
     border-radius: 3.058px;
     background: rgba(0, 0, 0, 0.19);
     backdrop-filter: blur(28.53845977783203px);
+    @include md-max {
+      position: absolute;
+      bottom: inherit;
+      right: inherit;
+      top: 10%;
+      left: 0;
+    }
+  }
+  .price-2 {
+    position: absolute;
+    top: 7%;
+    right: 4%;
+    padding: 3px 16px 3px 16px;
+    border-radius: 3.058px;
+    background: rgba(0, 0, 0, 0.19);
+    backdrop-filter: blur(28.53845977783203px);
+    color: #fff;
+    font-family: Synonym;
+    font-size: 18.346px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 152.023%;
   }
 }
